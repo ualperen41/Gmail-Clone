@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+header {
+  background-color: forestgreen;
+  height: 90px;
+}
+
+.left-aside {
+  background-color: aqua;
+  width: 400px;
+}
+
+.center {
+  background-color: yellow;
+}
+
+.right-aside {
+  background-color: tomato;
+}
+@media (max-width: 1000px) {
+  .right-aside {
+    display: none;
+  }
+}
+
+main {
+  background-color: red;
+  height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: auto 5fr 0.5fr;
+}
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: auto 5fr;
+  }
+}/*# sourceMappingURL=style.css.map */

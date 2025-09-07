@@ -1,0 +1,16 @@
+@use "./base/reset";
+@use "./components/header";
+@use "./components/left-aside";
+@use "./components/center";
+@use "./components/right-aside";
+
+main {
+  background-color: red;
+  height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: auto 5fr 0.5fr;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: auto 5fr;
+  }
+}
