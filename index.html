@@ -141,12 +141,106 @@
               <i class="bi bi-star"></i>
               <span>Furkan</span>
             </div>
+
+            <div class="center">
+              <p class="mail-title">Title</p>
+              <p class="mail-desc">Description</p>
+            </div>
+
+            <div class="right">
+              <p class="mail-date">25 Mayıs</p>
+              <div class="delete">
+                <i class="bi bi-trash-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="mail">
+            <div class="left">
+              <input type="checkbox" />
+              <i class="bi bi-star"></i>
+              <span>Furkan</span>
+            </div>
+
+            <div class="center">
+              <p class="mail-title">Title</p>
+              <p class="mail-desc">Description</p>
+            </div>
+
+            <div class="right">
+              <p class="mail-date">25 Mayıs</p>
+              <div class="delete">
+                <i class="bi bi-trash-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="mail">
+            <div class="left">
+              <input type="checkbox" />
+              <i class="bi bi-star"></i>
+              <span>Furkan</span>
+            </div>
+
+            <div class="center">
+              <p class="mail-title">Title</p>
+              <p class="mail-desc">Description</p>
+            </div>
+
+            <div class="right">
+              <p class="mail-date">25 Mayıs</p>
+              <div class="delete">
+                <i class="bi bi-trash-fill"></i>
+              </div>
+            </div>
+          </div>
+          <div class="mail">
+            <div class="left">
+              <input type="checkbox" />
+              <i class="bi bi-star"></i>
+              <span>Furkan</span>
+            </div>
+
+            <div class="center">
+              <p class="mail-title">Title</p>
+              <p class="mail-desc">Description</p>
+            </div>
+
+            <div class="right">
+              <p class="mail-date">25 Mayıs</p>
+              <div class="delete">
+                <i class="bi bi-trash-fill"></i>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- Right Aside -->
-      <aside class="right-aside"></aside>
+      <aside class="right-aside">
+        <img id="calendar" src="./images/calendar-48.png" alt="" />
+        <img src="./images/keep-48.png" alt="" />
+        <img src="./images/task-48.png" alt="" />
+        <img src="./images/account-48.png" alt="" />
+        <span></span>
+        <i class="bi bi-plus"></i>
+      </aside>
     </main>
+
+    <!-- Modal -->
+    <div class="modal-wrapper">
+      <div class="modal-inner">
+        <i id="close-btn" class="bi bi-x-lg"></i>
+
+        <form id="mail-form">
+          <label for="who">Kime</label>
+          <input type="text" id="who" />
+          <label for="subject">Konu</label>
+          <input type="text" id="subject" />
+          <label for="content">İçerik</label>
+          <textarea id="content"></textarea>
+
+          <button type="submit" id="mail-form-btn">Gönder</button>
+        </form>
+      </div>
+    </div>
     <!-- JS BAĞLANTI -->
     <script src="./js/main.js"></script>
   </body>
