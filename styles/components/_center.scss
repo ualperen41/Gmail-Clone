@@ -6,7 +6,7 @@
   background-color: v.$mails-background;
   border-radius: 8px;
 
-  //Icon
+  // Icon
   i {
     @include gb.icon;
     width: 20px;
@@ -15,17 +15,20 @@
     display: grid;
     place-items: center;
   }
+
   .md-none {
     @include mx.md {
       display: none;
     }
   }
+
   // Top
   &-top {
     @include gb.flexBox;
     justify-content: space-between;
     gap: 8px;
     padding: 15px 30px;
+
     // Left
     &-left {
       @include gb.flexBox;
@@ -34,15 +37,15 @@
       // Checkbox
       .checkbox {
         @include gb.flexBox;
-
         gap: 15px;
       }
     }
 
-    //Right
+    // Right
     &-right {
       @include gb.flexBox;
       gap: 20px;
+
       p {
         font-size: 15px;
         white-space: nowrap;
@@ -50,6 +53,7 @@
           display: none;
         }
       }
+
       .keyboard {
         @include gb.flexBox;
         gap: 10px;
@@ -62,7 +66,7 @@
     .mail {
       height: 41px;
       display: grid;
-      grid-template-columns: 1fr 5fr 5fr;
+      grid-template-columns: 1fr 5fr 1fr;
       gap: 10px;
       font-size: 16px;
       background-color: v.$box-color;
@@ -71,6 +75,7 @@
       &:hover {
         box-shadow: 0 0 10px rgb(211, 211, 211);
       }
+
       &:hover > .right .mail-date {
         display: none;
       }
@@ -95,7 +100,6 @@
       .center {
         @include gb.flexBox;
         gap: 10px;
-        font-palette: 10px;
         font-size: 17px;
         font-weight: 500;
         background: transparent;
@@ -120,9 +124,7 @@
         .delete {
           font-size: 17px;
           cursor: pointer;
-          i {
-            display: none;
-          }
+          display: none;
         }
       }
     }

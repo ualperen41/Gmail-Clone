@@ -246,7 +246,7 @@ header .header-icons .user-image {
 .center .mails-area .mail {
   height: 41px;
   display: grid;
-  grid-template-columns: 1fr 5fr 5fr;
+  grid-template-columns: 1fr 5fr 1fr;
   gap: 10px;
   font-size: 16px;
   background-color: #f2f6fc;
@@ -291,7 +291,6 @@ header .header-icons .user-image {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-palette: 10px;
   font-size: 17px;
   font-weight: 500;
   background: transparent;
@@ -320,8 +319,6 @@ header .header-icons .user-image {
 .center .mails-area .mail .right .delete {
   font-size: 17px;
   cursor: pointer;
-}
-.center .mails-area .mail .right .delete i {
   display: none;
 }
 

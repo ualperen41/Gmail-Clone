@@ -12,34 +12,33 @@ const uiElement = {
 
 const renderMails = (outlet, data) => {
   outlet.innerHTML = data
-    .map((mail) => {
-      ` <div class="mail" data-id="${mail.id}">
+    .map(
+      (mail) =>
+        ` <div class="mail" data-id="${mail.id}">
             <div class="left">
               <input type="checkbox" />
-              <i class="bi bi-star ${mail.stared ? "-fill " : ""}"></i>
+              <i class="bi bi-star${mail.stared ? "-fill" : ""}"></i>
               <span>${mail.reciver}</span>
             </div>
-
             <div class="center">
               <p class="mail-title">${mail.title}</p>
-              <p class="mail-description">${mail.message}</p>
+              <p class="mail-description>${mail.message}</p>
             </div>
-
             <div class="right">
               <p class="mail-date">${mail.date}</p>
               <div class="delete">
                 <i class="bi bi-trash-fill"></i>
               </div>
             </div>
-          </div>`;
-    })
+          </div>`
+    )
     .join("");
 };
 
-// const updateMail = () => {
-//   if (e.target.classList.contains("bi-trash-fill")) {
-//     const res = confirm("Silme işlemini onaylıyor musunuz?");
-//   }
-// };
+const updateMail = () => {
+  if (e.target.classList.contains("bi-trash-fill")) {
+    const res = confirm("Silme işlemini onaylıyor musunuz?");
+  }
+};
 
 export { uiElement, renderMails };
