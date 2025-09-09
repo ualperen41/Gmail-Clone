@@ -12,9 +12,9 @@
 header {
   display: flex;
   align-items: center;
-  height: 90px;
   justify-content: space-between;
   padding: 20px;
+  height: 90px;
   gap: 20px;
 }
 header .header-left {
@@ -22,7 +22,7 @@ header .header-left {
   align-items: center;
   gap: 10px;
 }
-header #menu-btn {
+header .header-left #menu-btn {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -31,25 +31,24 @@ header #menu-btn {
   cursor: pointer;
   transition: all 0.4s ease;
 }
-header #menu-btn:hover {
+header .header-left #menu-btn:hover {
   background-color: #eaebef;
 }
-header .logo {
+header .header-left .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-header .logo span {
+header .header-left .logo span {
   font-size: 20px;
   font-weight: 400;
 }
 @media (max-width: 1200px) {
-  header .logo span {
+  header .header-left .logo span {
     display: none;
   }
 }
-
-.search-form {
+header .search-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,16 +60,16 @@ header .logo span {
   padding: 10px 25px;
 }
 @media (max-width: 768px) {
-  .search-form {
+  header .search-form {
     max-width: 300px;
   }
 }
 @media (max-width: 500px) {
-  .search-form {
+  header .search-form {
     max-width: 200px;
   }
 }
-.search-form button {
+header .search-form button {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -80,33 +79,32 @@ header .logo span {
   transition: all 0.4s ease;
   font-size: 20px;
 }
-.search-form button:hover {
+header .search-form button:hover {
   background-color: #eaebef;
 }
 @media (max-width: 768px) {
-  .search-form button {
+  header .search-form button {
     width: 10px;
     height: 10px;
     font-size: 15px;
   }
 }
 @media (max-width: 500px) {
-  .search-form button {
+  header .search-form button {
     display: none !important;
   }
 }
-.search-form input {
+header .search-form input {
   flex: 1;
-  background-color: transparent;
+  background: transparent;
   font-size: 18px;
 }
-
-.header-icons {
+header .header-icons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.header-icons i {
+header .header-icons i {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -115,20 +113,20 @@ header .logo span {
   cursor: pointer;
   transition: all 0.4s ease;
 }
-.header-icons i:hover {
+header .header-icons i:hover {
   background-color: #eaebef;
 }
 @media (max-width: 1200px) {
-  .header-icons i {
+  header .header-icons i {
     font-size: 20px;
   }
 }
 @media (max-width: 768px) {
-  .header-icons i {
+  header .header-icons i {
     display: none;
   }
 }
-.header-icons .user-image {
+header .header-icons .user-image {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -142,11 +140,6 @@ header .logo span {
 }
 .left-aside span {
   font-weight: 500;
-}
-@media (max-width: 1200px) {
-  .left-aside span {
-    display: none;
-  }
 }
 .left-aside .create {
   background-color: #c2e7ff;
@@ -327,6 +320,8 @@ header .logo span {
 .center .mails-area .mail .right .delete {
   font-size: 17px;
   cursor: pointer;
+}
+.center .mails-area .mail .right .delete i {
   display: none;
 }
 

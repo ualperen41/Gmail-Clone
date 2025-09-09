@@ -7,31 +7,39 @@ const uiElement = {
   leftAside: document.querySelector(".left-aside"),
   form: document.querySelector("#mail-form"),
   mailsArea: document.querySelector(".mails-area"),
-  searchForm: document.querySelector(".search-form"),
+  searchForm: document.querySelector("#search-form"),
 };
 
 const renderMails = (outlet, data) => {
-  outlet.innerHTML = data.map((mail) => {
-    ` <div class="mail" data-id="${mail.id}">
+  outlet.innerHTML = data
+    .map((mail) => {
+      ` <div class="mail" data-id="${mail.id}">
             <div class="left">
               <input type="checkbox" />
               <i class="bi bi-star ${mail.stared ? "-fill " : ""}"></i>
-              <span>${mail.reciever}</span>
+              <span>${mail.receiver}</span>
             </div>
 
             <div class="center">
-              <p class="mail-title">{mail.title}</p>
-              <p class="mail-description></p>
+              <p class="mail-title">${mail.title}</p>
+              <p class="mail-description>${mail.message}</p>
             </div>
 
             <div class="right">
-              <p class="mail-date">{mail.date}</p>
+              <p class="mail-date">${mail.date}</p>
               <div class="delete">
                 <i class="bi bi-trash-fill"></i>
               </div>
             </div>
           </div>`;
-  });
+    })
+    .join("");
+};
+
+const updateMail = () => {
+  if (e.target.classList.contains("bi-trash-fill")) {
+    const res = confirm("Silme işlemini onaylıyor musunuz?");
+  }
 };
 
 export { uiElement, renderMails };

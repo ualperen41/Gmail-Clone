@@ -120,7 +120,9 @@
         .delete {
           font-size: 17px;
           cursor: pointer;
-          display: none;
+          i {
+            display: none;
+          }
         }
       }
     }
