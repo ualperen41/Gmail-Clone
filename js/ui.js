@@ -17,12 +17,12 @@ const renderMails = (outlet, data) => {
             <div class="left">
               <input type="checkbox" />
               <i class="bi bi-star ${mail.stared ? "-fill " : ""}"></i>
-              <span>${mail.receiver}</span>
+              <span>${mail.reciver}</span>
             </div>
 
             <div class="center">
               <p class="mail-title">${mail.title}</p>
-              <p class="mail-description>${mail.message}</p>
+              <p class="mail-description">${mail.message}</p>
             </div>
 
             <div class="right">
@@ -36,10 +36,10 @@ const renderMails = (outlet, data) => {
     .join("");
 };
 
-const updateMail = () => {
-  if (e.target.classList.contains("bi-trash-fill")) {
-    const res = confirm("Silme işlemini onaylıyor musunuz?");
-  }
-};
+// const updateMail = () => {
+//   if (e.target.classList.contains("bi-trash-fill")) {
+//     const res = confirm("Silme işlemini onaylıyor musunuz?");
+//   }
+// };
 
 export { uiElement, renderMails };
