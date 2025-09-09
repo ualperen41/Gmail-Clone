@@ -20,3 +20,9 @@ main {
   display: grid;
   grid-template-columns: auto 5fr 0.5fr;
 }
+.hide {
+  .create span,
+  .left-aside-middle span {
+    display: none;
+  }
+}

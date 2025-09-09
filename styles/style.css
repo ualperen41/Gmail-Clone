@@ -356,6 +356,10 @@ header .logo span {
   height: 100%;
   position: fixed;
   top: 0;
+  display: none;
+}
+.modal-wrapper.open {
+  display: block;
 }
 .modal-wrapper .modal-inner {
   position: absolute;
@@ -422,4 +426,9 @@ main {
   height: calc(100vh - 90px);
   display: grid;
   grid-template-columns: auto 5fr 0.5fr;
+}
+
+.hide .create span,
+.hide .left-aside-middle span {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

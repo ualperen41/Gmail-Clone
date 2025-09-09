@@ -6,7 +6,10 @@
   height: 100%;
   position: fixed;
   top: 0;
-
+  display: none;
+  &.open {
+    display: block;
+  }
   .modal-inner {
     position: absolute;
     top: 50%;
