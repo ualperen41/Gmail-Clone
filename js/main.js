@@ -1,4 +1,4 @@
-import { uiElement, renderMails } from "./ui.js";
+import { uiElement, renderMails, updateMail } from "./ui.js";
 const mails = JSON.parse(localStorage.getItem("mails")) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -90,3 +90,34 @@ uiElement.form.addEventListener("submit", (e) => {
   renderMails(uiElement.mailsArea, mails);
 });
 uiElement.mailsArea.addEventListener("click", updateMail);
+
+uiElement.navigaiton.addEventListener("click", (e) => {
+  const clickCategory = e.target.closest("a");
+
+  const links = uiElement.navigaiton.querySelectorAll("a");
+  links.forEach((link) => link.classList.remove("active"));
+  clickCategory.classList.add("active");
+
+  const categoryName = clickCategory.innerText.trim();
+
+  if (categoryName === "Yıldızlananlar") {
+    const staredMails = mails.filter((mail) => mail.stared == true);
+
+    renderMails(uiElement.mailsArea, staredMails);
+  } else {
+    renderMails(uiElement.mailsArea, mails);
+  }
+});
+
+uiElement.searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const query = e.target[1].value;
+
+  const filtredMails = mails.filter((i) =>
+    i.reciver.toLowerCase().includes(query.toLowerCase())
+  );
+
+  renderMails(uiElement.mailsArea, filtredMails);
+});
+export { mails };

@@ -263,7 +263,7 @@ header .header-icons .user-image {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 100%;
 }
 .center .mails-area .mail .left {
   display: flex;
@@ -310,7 +310,7 @@ header .header-icons .user-image {
 .center .mails-area .mail .right {
   display: flex;
   align-items: center;
-  align-items: center;
+  justify-content: center;
 }
 .center .mails-area .mail .right .mail-date {
   white-space: nowrap;
@@ -423,4 +423,8 @@ main {
 .hide .create span,
 .hide .left-aside-middle span {
   display: none;
+}
+
+.bi-star-fill {
+  color: #ece852;
 }/*# sourceMappingURL=style.css.map */
